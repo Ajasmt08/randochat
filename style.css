@@ -1,13 +1,13 @@
 :root {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --primary-color: #3b82f6;
-    --primary-hover: #2563eb;
-    --text-color: #f8fafc;
-    --text-muted: #94a3b8;
-    --border-color: #334155;
-    --success-color: #10b981;
-    --danger-color: #ef4444;
+    --bg-color: #000000;
+    --card-bg: #121212;
+    --primary-color: #ffffff;
+    --primary-hover: #e5e5e5;
+    --text-color: #ffffff;
+    --text-muted: #888888;
+    --border-color: #333333;
+    --success-color: #ffffff;
+    --danger-color: #ffffff;
 }
 
 * {
@@ -33,7 +33,7 @@ body {
     height: 100%;
     background-color: var(--card-bg);
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
     overflow: hidden;
 }
 
@@ -41,6 +41,7 @@ body {
     .app-container {
         height: 90vh;
         border-radius: 20px;
+        border: 1px solid var(--border-color);
     }
 }
 
@@ -75,7 +76,7 @@ body {
 
 .logo-container h1 {
     font-size: 3rem;
-    background: linear-gradient(to right, #60a5fa, #a855f7);
+    background: var(--primary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
@@ -97,7 +98,7 @@ input {
     padding: 15px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #000000;
     color: var(--text-color);
     font-size: 1rem;
     outline: none;
@@ -113,7 +114,7 @@ button {
     border-radius: 12px;
     border: none;
     background-color: var(--primary-color);
-    color: white;
+    color: #000000;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -148,7 +149,7 @@ button:active {
 }
 
 .chip {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #000000;
     border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 8px 16px;
@@ -161,6 +162,7 @@ button:active {
 .chip:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+    color: #000000;
     transform: translateY(-2px);
 }
 
@@ -203,7 +205,8 @@ button:active {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #333333, #000000);
+    border: 1px solid var(--border-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,6 +219,7 @@ button:active {
 
 .user-circle:hover {
     transform: scale(1.05);
+    border-color: var(--primary-color);
 }
 
 .user-circle::after {
@@ -254,6 +258,7 @@ button:active {
 
 .status-dot.online {
     background-color: var(--success-color);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .status-dot.offline {
@@ -286,13 +291,13 @@ button:active {
 .message.sent {
     align-self: flex-end;
     background-color: var(--primary-color);
-    color: white;
+    color: #000000;
     border-bottom-right-radius: 4px;
 }
 
 .message.received {
     align-self: flex-start;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #333333;
     color: var(--text-color);
     border-bottom-left-radius: 4px;
 }
@@ -323,7 +328,7 @@ button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,6 +352,7 @@ button:active {
     max-width: 350px;
     transform: scale(0.9);
     transition: transform 0.3s;
+    border: 1px solid var(--border-color);
 }
 
 .modal.active .modal-content {
@@ -366,7 +372,7 @@ button:active {
 }
 
 .secondary-btn:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Searching Modal & Animation */
