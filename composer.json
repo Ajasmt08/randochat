@@ -1,0 +1,12 @@
+{
+    "name": "ajas/randochat",
+    "description": "Real-time anonymous chat application",
+    "require": {
+        "cboden/ratchet": "^0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "RandoChat\\": "src/"
+        }
+    }
+}

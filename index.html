@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandoChat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="logo-container">
+                <h1>RandoChat</h1>
+                <p>Connect with anyone, anywhere.</p>
+            </div>
+            <div class="input-group">
+                <input type="text" id="username-input" placeholder="Enter your username">
+                <button id="join-btn">Join Now</button>
+            </div>
+            <div class="quick-join">
+                <p>Or join as:</p>
+                <div id="quick-join-chips" class="chips-container">
+                    <!-- Random names will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- User Selection Screen -->
+        <div id="selection-screen" class="screen">
+            <header>
+                <h2>Select a User</h2>
+                <div class="user-info">
+                    <span id="current-user"></span>
+                    <button id="disconnect-btn" class="icon-btn">Logout</button>
+                </div>
+            </header>
+            <div class="users-grid" id="users-grid">
+                <!-- User circles will be populated here -->
+            </div>
+            <div class="actions">
+                <button id="random-chat-btn" class="primary-btn">Random Chat</button>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen">
+            <header>
+                <div class="chat-header-info">
+                    <button id="back-btn" class="icon-btn">←</button>
+                    <h3 id="chat-partner-name">User</h3>
+                    <span class="status-dot online"></span>
+                </div>
+            </header>
+            <div class="messages-container" id="messages-container">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="input-area" id="chat-input-area">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+            <div class="post-chat-actions" id="post-chat-actions" style="display: none;">
+                <button id="post-chat-random-btn" class="primary-btn">Find Another Random Partner</button>
+                <button id="post-chat-home-btn" class="secondary-btn">Go to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Incoming Request</h3>
+            <p id="modal-message">User wants to chat with you.</p>
+            <div class="modal-actions">
+                <button id="accept-btn" class="primary-btn">Accept</button>
+                <button id="decline-btn" class="secondary-btn">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Searching Modal -->
+    <div id="searching-modal" class="modal">
+        <div class="modal-content searching-content">
+            <h3>Searching for Partner</h3>
+            <div class="radar-spinner">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <p>Please wait...</p>
+            <button id="cancel-search-btn" class="secondary-btn">Cancel</button>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
